@@ -1,9 +1,9 @@
 .DEFAULT_GOAL := run
 
 run:
-	@npx webpack --config webpack.dev.js --watch & ~/.air
+	@npx webpack --watch --config webpack.dev.js & ~/.air
 
-build: clean
+build:
 	@npx webpack --config webpack.prod.js & go build -o calida.o && ./calida.o
 
 init:
