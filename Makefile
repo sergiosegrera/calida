@@ -4,7 +4,7 @@ run:
 	@npx webpack --watch --config webpack.dev.js & ~/.air
 
 build:
-	@npx webpack --config webpack.prod.js & go build -o calida.o && ./calida.o
+	@npx webpack --config webpack.prod.js & go build -o calida.o ./cmd/main.go && ./calida.o
 
 init:
 	@go mod init
